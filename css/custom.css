@@ -1,4 +1,4 @@
-body {
+#container {
     overflow-x: hidden;
 }
 
@@ -141,8 +141,8 @@ body {
 
 /*滑动解锁三角形及其动画*/
 #unlock {
-    float: right;
-    margin-right: 9%;
+    right: 12%;
+    position: absolute;
 }
 
 .triangle {
@@ -301,9 +301,6 @@ body {
 
 #square_model {
     width: 80vw;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     z-index: 2;
     position: relative;
 }
