@@ -265,22 +265,22 @@ function switchMute() {
 
 function responsiveOpening() {
     //开屏动画自适应
-var h = document.body.offsetHeight;
-var w = document.body.offsetWidth;
-var opening_element = document.getElementById("opening_element");
-var opening_plane = document.getElementById("opening_plane");
-if (h/w>=1.775) {
-    opening_element.style.width="100%";
-    opening_element.style.height="auto";
-    opening_plane.style.width="100%";
-    opening_plane.style.height="auto";
-}
-else {
-    opening_element.style.width="auto";
-    opening_element.style.height="100%";
-    opening_plane.style.width="auto";
-    opening_plane.style.height="100%";
-}
+    var h = document.body.offsetHeight;
+    var w = document.body.offsetWidth;
+    var opening_element = document.getElementById("opening_element");
+    var opening_plane = document.getElementById("opening_plane");
+    if (h/w>=1.775) {
+        opening_element.style.width="100%";
+        opening_element.style.height="auto";
+        opening_plane.style.width="100%";
+        opening_plane.style.height="auto";
+    }
+    else {
+        opening_element.style.width="auto";
+        opening_element.style.height="100%";
+        opening_plane.style.width="auto";
+        opening_plane.style.height="100%";
+    }
 }
 
 
@@ -431,14 +431,14 @@ $(document).ready(function() {
         if(document.readyState=="complete"){//complete加载完成
             $("#opening").append([openingPlane,openingSmoke,openingElement,openingBackground]);
             responsiveOpening();
+            setTimeout(function(){
+                $("#opening").fadeOut();
+                $("html").removeClass("no_scroll");
+                $("body").removeClass("no_scroll");
+                $("#body").removeClass("hidden");
+            },3000);
         }
     }
-    setTimeout(function(){
-            $("#opening").fadeOut();
-            $("html").removeClass("no_scroll");
-            $("body").removeClass("no_scroll");
-            $("#body").removeClass("hidden");
-        },3000);
     for(let i=0; i<ids.length; i++) {
         animation(ids[i]);
     }
