@@ -12,9 +12,7 @@ function Marquee0(){
         colee_left[j].scrollLeft++;
     }
 }
-
 }
-setInterval(Marquee0,speed);
 
 //向右循环播放字母
 function Marquee1(){
@@ -29,9 +27,7 @@ function Marquee1(){
     colee_right[i].scrollLeft--;
     }
 }
-
 }
-setInterval(Marquee1,speed);
 
 //方型模特图循环播放
 var indicator = 1;
@@ -346,7 +342,7 @@ function calculatePosition() {
         $("#badge").css("margin-top", "-"+0.07*squareSectionHeight+"px");
     
         //方型模特图高度
-        $("#square_model").css("top", "-"+0.05*squareSectionHeight+"px");
+        $("#square_model").css({"top": "-"+0.05*squareSectionHeight+"px","left": 0.08*screenWidth+"px"});
     
         //section4的高度
         section4Height = (screenWidth * 5440/ 1283);
@@ -427,6 +423,8 @@ $(document).ready(function() {
     var openingSmoke = '<img src="images/opening_smoke.gif" class="opening_scale" style="z-index: 30;">';
     var openingElement = '<img src="images/opening_element.gif" id="opening_element" style="z-index: 20;">';
     var openingBackground = '<img src="images/opening_background.gif" class="opening_scale " style="z-index: 10;"></img>';
+    setInterval(Marquee0,speed);
+    setInterval(Marquee1,speed);
     document.onreadystatechange = function () {//即在加载的过程中执行下面的代码
         if(document.readyState=="complete"){//complete加载完成
             $("#opening").append([openingPlane,openingSmoke,openingElement,openingBackground]);
