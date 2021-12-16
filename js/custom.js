@@ -247,7 +247,24 @@ bodySwipe.addEventListener("touchmove", boxTouchMove, false);
 bodySwipe.addEventListener("touchend", boxTouchEndVertical, false);
 
 
-//开屏动画自适应
+
+
+
+var unmuteButton = document.getElementById("unmuteButton");
+var audio = document.getElementById("audio");
+function switchMute() {
+    if (audio.muted) {
+        audio.muted = false;
+        unmuteButton.src="images/sound.png";
+    }
+    else {
+        audio.muted = true;
+        unmuteButton.src="images/no-sound.png";
+    }
+};
+
+function responsiveOpening() {
+    //开屏动画自适应
 var h = document.body.offsetHeight;
 var w = document.body.offsetWidth;
 var opening_element = document.getElementById("opening_element");
@@ -264,20 +281,7 @@ else {
     opening_plane.style.width="auto";
     opening_plane.style.height="100%";
 }
-
-
-var unmuteButton = document.getElementById("unmuteButton");
-var audio = document.getElementById("audio");
-function switchMute() {
-    if (audio.muted) {
-        audio.muted = false;
-        unmuteButton.src="images/sound.png";
-    }
-    else {
-        audio.muted = true;
-        unmuteButton.src="images/no-sound.png";
-    }
-};
+}
 
 
 function calculatePosition() {
@@ -419,13 +423,22 @@ function calculatePosition() {
 
 var ids = ["#draw_face", "#flower", "#sticker", "#needle", "#model_rect", "#badge"];
 $(document).ready(function() {
+    var openingPlane = '<img src="images/opening_plane.gif" id="opening_plane" style="z-index: 40;">';
+    var openingSmoke = '<img src="images/opening_smoke.gif" class="opening_scale" style="z-index: 30;">';
+    var openingElement = '<img src="images/opening_element.gif" id="opening_element" style="z-index: 20;">';
+    var openingBackground = '<img src="images/opening_background.gif" class="opening_scale " style="z-index: 10;"></img>';
+    document.onreadystatechange = function () {//即在加载的过程中执行下面的代码
+        if(document.readyState=="complete"){//complete加载完成
+            $("#opening").append([openingPlane,openingSmoke,openingElement,openingBackground]);
+            responsiveOpening();
+        }
+    }
     setTimeout(function(){
-            $(".opening").css("display","none");
+            $("#opening").fadeOut();
             $("html").removeClass("no_scroll");
             $("body").removeClass("no_scroll");
             $("#body").removeClass("hidden");
-
-        },3000);//5500
+        },3000);
     for(let i=0; i<ids.length; i++) {
         animation(ids[i]);
     }

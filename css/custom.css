@@ -39,12 +39,6 @@ body {
     visibility: visible;
 }
 
-#body {
-    -webkit-animation: fadeIn 1.5s;
-    animation: fadeIn 1.5s;
-    animation-delay: 3s;
-}
-
 .background {
     background-repeat: no-repeat;
     background-position: top center;
