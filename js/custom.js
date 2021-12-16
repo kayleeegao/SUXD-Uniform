@@ -80,7 +80,7 @@ function animation(el) {
 function scrollToMyDiv(element) {
     window.scroll({
       top: element.offsetTop, 
-      behavior: 'smooth'
+      behavior: 'smooth',
     });
 }
 
@@ -295,6 +295,8 @@ function calculatePosition() {
     
         //笑脸位置
         $("#smile_face").css({"margin-left": 0.12*screenWidth+"px", "margin-top": 0.08*section1Height+"px"});
+        $("#unlock").css("top", 0.92*section1Height+"px");
+
     
         //p1 model的大小
         $(".model_size").each(function() {
