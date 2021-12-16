@@ -1,0 +1,472 @@
+body {
+    overflow-x: hidden;
+}
+
+#opening_element {
+    position: absolute;
+    display: block;
+    margin: auto;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
+#opening_plane {
+    position: absolute;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.opening_scale {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.no_scroll {
+    overflow: hidden;
+    height: 100%;
+}
+
+
+.hidden {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+#body {
+    -webkit-animation: fadeIn 1.5s;
+    animation: fadeIn 1.5s;
+    animation-delay: 3s;
+}
+
+.background {
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100% auto;
+}
+
+.height_auto {
+    height: auto;
+}
+
+.width_auto {
+    width: auto;
+}
+
+#unmuteButton {
+    background-color: rgb(238, 197, 64);
+    border-radius: 100%;
+    padding: 3vw;
+    width: 6vw;
+    height: auto;
+    top: 30px; 
+    right: 30px; 
+    position:fixed; 
+    z-index: 999; 
+    filter: drop-shadow(3px 3px 4px grey);
+}
+
+#section1 {
+    background-image: url(../images/p1_background.png), url(../images/background.gif);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top center,top left;
+    background-size: 100% auto, 100% auto;
+}
+
+#section2 {
+    background-image: url(../images/p2_background.png);
+}
+
+#square_section {
+    background-image: url(../images/square_background.png);
+}
+
+#section4 {
+    background-image: url(../images/rolling_title.gif), url(../images/p4_background.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top center,top left;
+    background-size: 100% auto, 100% auto;
+}
+
+#section6 {
+    background-image: url(../images/p6_background.png);
+}
+
+#section7 {
+    background-image: url(../images/p7_background.png);
+}
+
+#section8 {
+    background-image: url(../images/p8_background.png);
+}
+
+#section9 {
+    background-image: url(../images/p9_background.png);
+}
+
+#smile_face {
+    width: 30vw;
+    position: absolute;
+}
+
+.model_size {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 20%;
+}
+
+/*字母自动播放*/
+.indemo0 {
+    float: left;
+    width: 800%;
+}
+
+
+.colee_left, .colee_right {
+    overflow:hidden;
+    margin:0;
+}
+
+.colee_left img, .colee_left1, .colee_left2, .colee_right img, .colee_right1, .colee_right2 {
+    float: left;
+}
+
+
+/*模特图片左右滑动加吸附*/
+.swiper {
+    width: 100%;
+  }
+
+/*滑动解锁三角形及其动画*/
+#unlock {
+    float: right;
+    margin-right: 9%;
+}
+
+.triangle {
+    width: 2vw;
+    height: auto;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    margin-left: -4px;
+}
+
+
+#swipe_more {
+    vertical-align: middle;
+    width: auto;
+}
+
+#arrows {
+    display: inline;
+}
+
+#arrows #t1 {
+    animation: arrow 3s infinite;
+    -webkit-animation: arrow 3s infinite;
+    animation-delay: -1.5s;
+    -webkit-animation-delay: -1.5s;
+}
+#arrows #t2 {
+    animation: arrow 3s infinite;
+    -webkit-animation: arrow 3s infinite;
+    animation-delay: -1s;
+    -webkit-animation-delay: -1s;
+}
+#arrows #t3 {
+    animation: arrow 3s infinite;
+    -webkit-animation: arrow 3s infinite;
+    animation-delay: -0.5s;
+    -webkit-animation-delay: -0.5s;
+}
+#arrows #t4 {
+    animation: arrow 3s infinite;
+    -webkit-animation: arrow 3s infinite;
+    animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+}
+
+
+.coin1 {
+    width: 25vw;
+}
+
+#coin2 {
+    margin-top: 20px;
+    width: 30vw;
+}
+
+
+
+#bottom_coin1 {
+    transform: scaleX(-1);
+    width: 15vw;
+    z-index: 1;
+}
+
+#bottom_coin2 {
+    width: 20vw;
+    z-index: 70;
+    position: relative;
+    margin-right: 10px;
+}
+
+.float_right {
+    float: right;
+}
+
+.parent {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 0;
+}
+
+#p3_text1 {
+    position: relative;
+    width: 55vw;
+    height: auto;
+    z-index: 20;
+}
+
+#p3_back1 {
+    position: relative;
+    width: 50vw;
+    height: auto;
+    z-index: 10;
+    overflow: hidden;
+}
+#p3_model1 {
+    position: absolute;
+    width: 50vw;
+    height: auto;
+    z-index: 30;
+    overflow: hidden;
+
+}
+
+#p3_text2 {
+    position: relative;
+    width: 70vw;
+    height: auto;
+    z-index: 50;
+}
+
+#p3_back2 {
+    position: relative;
+    width: 90vw;
+    height: auto;
+    z-index: 0;
+    overflow: hidden;
+
+}
+#p3_model2 {
+    position: absolute;
+    width: 83vw;
+    height: auto;
+    z-index: 40;
+    left: 0;
+    top: -10px;
+    overflow: hidden;
+
+}
+
+.running_heart {
+    z-index: 60;
+    width: 45vw;
+    position: relative;
+    margin-top: 10px;
+}
+
+#badge {
+    width: 20vw;
+    height: auto;
+    float: right;
+    margin-right: 3vw;
+    transform: rotate(25deg);
+    z-index: 100;
+    position: relative;
+}
+
+.hinge {
+    -webkit-animation: hinge 1.5s;
+    animation: hinge 1.5s;
+    animation-fill-mode: forwards;
+}
+
+#square_model {
+    width: 80vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+    position: relative;
+}
+
+#twins {
+    width: 40vw;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+
+}
+
+#draw_face {
+    width: 30vw;
+    height: auto;
+    margin-right: 10px;
+}
+
+#walking_cup {
+    width: 60vw;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#flower {
+    width: 45vw;
+    height: auto;
+
+}
+
+.show {
+    visibility: visible !important;
+}
+
+#floating_model {
+    width: 70vw;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    animation: floating 3s infinite ease-in-out;
+    -webkit-animation: floating 3s infinite ease-in-out;
+}
+
+#sticker {
+    width: 25vw;
+    height: auto;
+    padding-top: 20px;
+}
+
+#needle {
+    width: 40vw;
+    height: auto;
+    margin-right: 10px;
+}
+
+#model_rect {
+    width: 78vw;
+    display: block;
+}
+
+.zoom {
+    -webkit-animation: zoomIn 1s, floating_twisting 1.5s infinite;
+    animation: zoomIn 1s, floating_twisting 1.5s infinite;
+    animation-delay: 0s, 1s;
+    -webkit-animation-delay: 0s, 1s;
+    visibility: visible !important;
+}
+
+.fly {
+    -webkit-animation: fadeInBottomRight 0.5s ease-out, floating 1.5s infinite ease-in-out;
+    animation: fadeInBottomRight 0.5s ease-out, floating 1.5s infinite ease-in-out;
+    animation-delay: 0s, 0.5s;
+    -webkit-animation-delay: 0s, 0.5s;
+    visibility: visible !important;
+}
+
+.rotate {
+    -webkit-animation: fadeIn 1s, rotate 1s;
+    animation: fadeIn 1s, rotate 1s;
+    visibility: visible !important;
+}
+
+#video {
+    width: 70vw;
+    height: auto;
+    border: solid 3px black;
+    border-radius: 10px; 
+    overflow: hidden; 
+    position: relative;
+    object-fit: cover;
+
+}
+
+#p6_model {
+    width: 70vw;
+    height: auto;
+    float: right;
+}
+
+
+
+@keyframes rotate {
+    0% {transform: rotate(20deg)}
+    100% {transform: rotate(0deg)}
+}
+@-webkit-keyframes rotate {
+    0% {transform: rotate(20deg)}
+    100% {transform: rotate(0deg)}
+}
+
+@keyframes arrow {
+    0% {opacity:0}
+    50% {opacity:1}
+    100% {opacity:0}
+}
+@-webkit-keyframes arrow {
+    0% {opacity:0}
+    50% {opacity:1}
+    100% {opacity:0}
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 10px); }
+    to   { transform: translate(0, -0px); }    
+}
+
+@-webkit-keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 10px); }
+    to   { transform: translate(0, -0px); }    
+}
+
+@keyframes floating_twisting {
+    0% { transform: translate(0,  0px) rotate(0deg);}
+    50%  { transform: translate(0, -6px) rotate(10deg);}
+    100%   { transform: translate(0, 0px) rotate(0deg);}    
+}
+
+@-webkit-keyframes floating_twisting {
+    0% { transform: translate(0,  0px) rotate(0deg);}
+    50%  { transform: translate(0, -6px) rotate(12deg);}
+    100%   { transform: translate(0, 0px) rotate(0deg);}   
+}
+
+
+@media only screen and (max-width: 321px) {/*iPhone 5/SE and Galaxy Fold*/
+    #model_rect {
+        transform: scale(0.95);
+    }
+    #video {
+        width: 65vw;
+    }
+    
+}

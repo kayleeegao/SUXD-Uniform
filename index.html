@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" class="no_scroll">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>SUXD队服宣传</title>
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/animate.min.css" />
+  <link rel="stylesheet" href="css/animate.min.css" />
+  <link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body class="no_scroll">
+
+  <!-- 开屏动画 -->
+  <img src="images/opening_plane.gif" id="opening_plane" class="opening" style="z-index: 40;">
+  <img src="images/opening_smoke.gif" class="opening_scale opening" style="z-index: 30;">
+  <img src="images/opening_element.gif" id="opening_element" class="opening" style="z-index: 20;">
+  <img src="images/opening_background.gif" class="opening_scale opening" style="z-index: 10;">
+
+
+  <div id="body" class="hidden">
+    <video id="audio" loop muted autoplay width="0" height="0" style="visibility: hidden; position:absolute; z-index:-999;">
+      <source src="bgm.mp3" type="audio/mp3">
+    </video>
+      <a onclick="switchMute()"><img id="unmuteButton" src="images/no-sound.png"></a>
+    <div id="vertical_swipe">
+      <div id="section1">
+        <div class="colee_left" id="colee1">
+          <div class="indemo0">
+            <div class="colee_left1">
+              <img src="images/looping_logo.png" class="banner width_auto" alt="循环字幕">
+              <img src="images/looping_logo.png" class="banner width_auto" alt="循环字幕">
+              <img src="images/looping_logo.png" class="banner width_auto" alt="循环字幕">
+            </div>
+            <div class="colee_left2"></div>
+          </div>
+        </div>
+        <img src="images/smile_face.png" alt="笑脸" id="smile_face" class="height_auto">
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="images/model1.png" alt="模特1" class="model_size width_auto"></div>
+            <div class="swiper-slide"><img src="images/model2.png" alt="模特2" class="model_size width_auto"></div>
+            <div class="swiper-slide"><img src="images/model3.png" alt="模特3" class="model_size width_auto"></div>
+            <div class="swiper-slide"><img src="images/model4.png" alt="模特4" class="model_size width_auto"></div>
+          </div>
+        </div>
+
+        <div id="unlock">
+          <div id="arrows">
+            <img src="images/triangle.png" class="triangle" id="t4">
+            <img src="images/triangle.png" class="triangle" id="t3">
+            <img src="images/triangle.png" class="triangle" id="t2">
+            <img src="images/triangle.png" class="triangle" id="t1">
+            <img src="images/slide.png" alt="滑动解锁更多" id="swipe_more">
+          </div>
+        </div>
+      </div>
+
+      <div class="colee_right">
+        <div class="indemo0">
+          <div class="colee_right1">
+            <img src="images/looping_logo.png" class="banner width_auto" alt="循环字幕">
+            <img src="images/looping_logo.png" class="banner width_auto" alt="循环字幕">
+            <img src="images/looping_logo.png" class="banner width_auto" alt="循环字幕">
+          </div>
+          <div class="colee_right2"></div>
+        </div>
+      </div>
+
+      <div id="section2" class="background">
+        <img src="images/rotating_face2.gif" alt="旋转笑脸硬币" class="coin1 height_auto hidden">
+        <img src="images/screen2_model1.png" alt="模特" id="screen2_model1" class="float_right hidden">
+        <br>
+        <img src="images/screen2_model2.png" alt="模特" id="screen2_model2" class="hidden">
+        <img src="images/rotating_face.gif" alt="旋转笑脸硬币" id="coin2" class="height_auto float_right hidden">
+      </div>
+
+      <div id="section3" style="overflow: hidden;">
+        <img src="images/p3_text1.png" alt="text" id="p3_text1" class="hidden">
+        <div class="parent">
+          <img src="images/p3_back1.png" alt="灰色背景" id="p3_back1" class="hidden">
+          <img src="images/p3_model1.png" alt="模特" id="p3_model1" class="hidden">
+        </div>
+        <div class="parent">
+          <img src="images/p3_back2.png" alt="灰色背景" id="p3_back2" class="hidden">
+          <img src="images/p3_model2.png" alt="模特" id="p3_model2" class="hidden">
+        </div>
+        <img src="images/p3_text2.png" alt="text" id="p3_text2" class="float_right hidden">
+
+        <img src="images/running_heart.gif" alt="奔跑的心心" class="running_heart float_right">
+      </div>
+    </div>
+
+    <div id="square_section" class="background">
+      <img src="images/badge.gif" alt="徽章" id="badge" class="float_right">
+      <img src="images/square_model1.jpg" alt="模特图" id="square_model">
+    </div>
+    <div id="section4">
+      <img src="images/twins.png" id="twins" alt="卡通形象">
+      <img src="images/model_rect.png" id="model_rect" alt="模特图" class="hidden">
+      <img src="images/draw_face.gif" id="draw_face" class="float_right hidden" alt="笑脸">
+    </div>
+
+    <div id="section5">
+      <img src="images/walking_cup.gif" alt="行走的杯子" id="walking_cup">
+      <div class="colee_right" id="black_colee1">
+        <div class="indemo0">
+          <div class="colee_right1">
+            <img src="images/black_looping_logo.png" class="banner width_auto" alt="循环字幕">
+            <img src="images/black_looping_logo.png" class="banner width_auto" alt="循环字幕">
+            <img src="images/black_looping_logo.png" class="banner width_auto" alt="循环字幕">
+
+          </div>
+          <div class="colee_right2"></div>
+        </div>
+      </div>
+      <img src="images/flower.png" id="flower" class="float_right">
+      <img src="images/floating_model.png" alt="模特图" id="floating_model" class="floating">
+      <img src="images/sticker.png" alt=“贴纸” id="sticker" class="hidden">
+    </div>
+
+    <div id="section6" class="background">
+      <div class="colee_right" id="black_colee2">
+        <div class="indemo0">
+          <div class="colee_right1">
+            <img src="images/black_looping_logo.png" class="banner width_auto" alt="循环字幕">
+            <img src="images/black_looping_logo.png" class="banner width_auto" alt="循环字幕">
+            <img src="images/black_looping_logo.png" class="banner width_auto" alt="循环字幕">
+          </div>
+          <div class="colee_right2"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="section7" class="background">
+      <img src="images/needle.png" alt="针筒卡通形象" id="needle" class="float_right hidden">
+      <img src="images/rotating_face2.gif" alt="旋转笑脸硬币" class="coin1 height_auto">
+    </div>
+
+    <div id="section8" class="background">
+      <video playsinline id="video" poster="images/video_poster.png" onclick="playVideo()">
+        <source src="images/vlog.webm" type="video/webm">
+        <source src="images/vlog.mp4" type="video/mp4">
+        您的浏览器暂不支持播放该视频
+      </video>
+      <div class="colee_left" id="black_colee3">
+        <div class="indemo0">
+          <div class="colee_left1">
+            <img src="images/black_looping_logo.png" class="banner width_auto" alt="循环字幕">
+            <img src="images/black_looping_logo.png" class="banner width_auto" alt="循环字幕">
+            <img src="images/black_looping_logo.png" class="banner width_auto" alt="循环字幕">
+          </div>
+          <div class="colee_left2"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="section9" class="background">
+      <img src="images/rotating_face.gif" alt="旋转笑脸硬币" id="bottom_coin1" class="height_auto">
+      <div class="float_right">
+        <img src="images/yellow_running_heart.gif" alt="奔跑的心心" class="running_heart">
+        <br>
+        <img src="images/rotating_face.gif" alt="旋转笑脸硬币" id="bottom_coin2" class="height_auto float_right">
+      </div>
+    </div>
+    <div class="colee_right" id="black_colee4">
+      <div class="indemo0">
+        <div class="colee_right1">
+          <img src="images/black_looping_logo.png" class="banner width_auto" alt="循环字幕">
+          <img src="images/black_looping_logo.png" class="banner width_auto" alt="循环字幕">
+          <img src="images/black_looping_logo.png" class="banner width_auto" alt="循环字幕">
+        </div>
+        <div class="colee_right2"></div>
+      </div>
+    </div>
+  </div>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/custom.js"></script>
+
+</body>
