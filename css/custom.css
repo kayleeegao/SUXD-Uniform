@@ -163,7 +163,7 @@
 }
 
 #arrows {
-    display: inline;
+    display: inline-block;
 }
 
 #arrows #t1 {
