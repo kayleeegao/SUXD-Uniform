@@ -13,12 +13,11 @@
 </head>
 
 <body class="no_scroll">
+  <div id="container">
 
   <!-- 开屏动画 -->
   <div id="opening">
   </div>
-
-
   <div id="body" class="hidden">
     <video id="audio" loop muted autoplay width="0" height="0" style="visibility: hidden; position:absolute; z-index:-999;">
       <source src="bgm.mp3" type="audio/mp3">
@@ -47,7 +46,6 @@
             <div class="swiper-slide"><img src="images/model4.png" alt="模特4" class="model_size width_auto"></div>
           </div>
         </div>
-
         <div id="unlock">
           <div id="arrows">
             <img src="images/triangle.png" class="triangle" id="t4">
@@ -65,6 +63,7 @@
             <img src="images/looping_logo.png" class="banner width_auto" alt="循环字幕">
             <img src="images/looping_logo.png" class="banner width_auto" alt="循环字幕">
             <img src="images/looping_logo.png" class="banner width_auto" alt="循环字幕">
+            
           </div>
           <div class="colee_right2"></div>
         </div>
@@ -78,7 +77,7 @@
         <img src="images/rotating_face.gif" alt="旋转笑脸硬币" id="coin2" class="height_auto float_right hidden">
       </div>
 
-      <div id="section3" style="overflow: hidden;">
+      <div id="section3">
         <img src="images/p3_text1.png" alt="text" id="p3_text1" class="hidden">
         <div class="parent">
           <img src="images/p3_back1.png" alt="灰色背景" id="p3_back1" class="hidden">
@@ -93,9 +92,9 @@
         <img src="images/running_heart.gif" alt="奔跑的心心" class="running_heart float_right">
       </div>
     </div>
+    <img src="images/badge.gif" alt="徽章" id="badge" class="float_right">
 
     <div id="square_section" class="background">
-      <img src="images/badge.gif" alt="徽章" id="badge" class="float_right">
       <img src="images/square_model1.jpg" alt="模特图" id="square_model">
     </div>
     <div id="section4">
@@ -177,6 +176,7 @@
       </div>
     </div>
   </div>
+</div>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/custom.js"></script>
