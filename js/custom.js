@@ -293,16 +293,18 @@ function switchMute() {
 
 //视频播放
 var videoPlayer = document.getElementById("video");
+var firstPlay = true;
 videoPlayer.addEventListener('click', function () {
-    if (videoPlayer.paused == false) {
-        videoPlayer.pause();
-        videoPlayer.firstChild.nodeValue = 'Play';
-        audio.pause();
-        unmuteButton.src="images/sound.png";
-    } else {
-        videoPlayer.play();
-        video.setAttribute("controls","controls");
-        videoPlayer.firstChild.nodeValue = 'Pause';
+    if (firstPlay) {
+        firstPlay = false;
+        if (videoPlayer.paused == false) {
+            videoPlayer.pause();
+            videoPlayer.firstChild.nodeValue = 'Play';
+        } else {
+            videoPlayer.play();
+            video.setAttribute("controls","controls");
+            videoPlayer.firstChild.nodeValue = 'Pause';
+        }
         audio.pause();
         unmuteButton.src="images/no-sound.png";
     }
