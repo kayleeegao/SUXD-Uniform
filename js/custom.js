@@ -109,10 +109,7 @@ function animation(el) {
 
 
 function scrollToMyDiv(element) {
-    //window.scroll({
-     //   top: element.offsetTop,
-     //   behavior: 'smooth',
-    //});
+
     window.scrollTo({ top: element.offsetTop, left: 0, behavior: 'smooth' });
 
 }
@@ -283,33 +280,34 @@ bodySwipe.addEventListener("touchend", boxTouchEndVertical, false);
 var unmuteButton = document.getElementById("unmuteButton");
 var audio = document.getElementById("audio");
 function switchMute() {
-    if (audio.muted) {
-        audio.muted = false;
+    if (audio.paused) {
+        audio.play();
         unmuteButton.src = "images/sound.png";
     }
     else {
-        audio.muted = true;
+        audio.pause();
         unmuteButton.src = "images/no-sound.png";
     }
 };
 
 
 //视频播放
-var video = document.getElementById("video");
-function playVideo(){
-    if(video.paused){
-        video.play();
-        video.setAttribute("controls","controls");
-        audio.muted = true;
-        unmuteButton.src="images/no-sound.png";
-
-    }else{
-        video.pause();
-        audio.muted = false;
+var videoPlayer = document.getElementById("video");
+videoPlayer.addEventListener('click', function () {
+    if (videoPlayer.paused == false) {
+        videoPlayer.pause();
+        videoPlayer.firstChild.nodeValue = 'Play';
+        audio.pause();
         unmuteButton.src="images/sound.png";
-
+    } else {
+        videoPlayer.play();
+        video.setAttribute("controls","controls");
+        videoPlayer.firstChild.nodeValue = 'Pause';
+        audio.pause();
+        unmuteButton.src="images/no-sound.png";
     }
-}
+});
+
 
 
 function responsiveOpening() {
