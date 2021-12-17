@@ -1,4 +1,4 @@
-body {
+* {
     -webkit-overflow-scrolling: touch;
 }
 
@@ -70,7 +70,7 @@ body {
     filter: drop-shadow(3px 3px 4px grey);
 }
 
-#section3.lazyback, #section4.lazyback, #section5.lazyback, #section6.lazyback, #section7.lazyback, #section8.lazyback, #section9.lazyback, #square_background.lazyback {
+#section3.lazy, #section4.lazy, #section5.lazy, #section6.lazy, #section7.lazy, #section8.lazy, #section9.lazy, #square_background.lazy {
     background-image: none;
  }
 
