@@ -19,9 +19,9 @@
   <div id="opening">
   </div>
   <div id="body" class="hidden">
-    <video id="audio" loop muted autoplay x5-playsinline="" playsinline="" webkit-playsinline="" width="0" height="0" style="visibility: hidden; position:absolute; z-index:-999;">
+    <audio id="audio" loop controls x5-playsinline="" playsinline="" webkit-playsinline="" width="0" height="0" style="visibility:hidden; position:absolute; z-index:-999;">
       <source src="bgm.mp3" type="audio/mp3">
-    </video>
+    </audio>
       <a onclick="switchMute()"><img id="unmuteButton" src="images/no-sound.png"></a>
     <div id="vertical_swipe">
       <div id="section1">
@@ -140,7 +140,7 @@
     </div>
 
     <div id="section8" class="background lazy">
-      <video playsinline id="video" poster="images/video_poster.png" onclick="playVideo()">
+      <video playsinline id="video" poster="images/video_poster.png">
         <source src="images/vlog.webm" type="video/webm">
         <source src="images/vlog.mp4" type="video/mp4">
         您的浏览器暂不支持播放该视频
