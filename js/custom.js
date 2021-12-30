@@ -1,36 +1,3 @@
-
-document.addEventListener("DOMContentLoaded", function () {
-    var lazyloadImages;
-    var lazyloadThrottleTimeout;
-    lazyloadImages = document.querySelectorAll(".lazy");
-
-    function lazyload() {
-        if (lazyloadThrottleTimeout) {
-            clearTimeout(lazyloadThrottleTimeout);
-        }
-
-        lazyloadThrottleTimeout = setTimeout(function () {
-            var scrollTop = window.pageYOffset;
-            lazyloadImages.forEach(function (img) {
-                if (img.offsetTop < (window.innerHeight + scrollTop + 500)) {
-                    img.src = img.dataset.src;
-                    img.classList.remove('lazy');
-                }
-            });
-            if (lazyloadImages.length == 0) {
-                document.removeEventListener("scroll", lazyload);
-                window.removeEventListener("resize", lazyload);
-                window.removeEventListener("orientationChange", lazyload);
-            }
-        }, 20);
-    }
-
-    document.addEventListener("scroll", lazyload);
-    window.addEventListener("resize", lazyload);
-    window.addEventListener("orientationChange", lazyload);
-})
-
-
 // 向左循环播放字母
 var speed = 20; //数字越大速度越慢
 function Marquee0() {
@@ -196,7 +163,7 @@ function boxTouchEndVertical(e) {
     var section3 = document.getElementById("section3");
 
     if ((Math.abs(moveY) > Math.abs(moveX) && moveY > 0)) { //向上滑动
-        if (verticalCout == 1) {
+        if (verticalCout == 1) { //在第二屏
             scrollToMyDiv(section1); //到第一屏
             //第二屏动画退出
             $(".coin1").eq(0).removeClass("animate__animated animate__bounceInDown").addClass("animate__animated animate__bounceOutDown hidden");
@@ -206,7 +173,7 @@ function boxTouchEndVertical(e) {
 
             verticalCout--;
         }
-        else if (verticalCout == 2) {
+        else if (verticalCout == 2) { //在第三屏
             scrollToMyDiv(section2); //到第二屏
             //第三屏动画退出
             $("#p3_text1").removeClass("animate__animated animate__slideInLeft").addClass("animate__animated animate__slideOutLeft hidden");
@@ -229,17 +196,16 @@ function boxTouchEndVertical(e) {
         }
     }
     else if ((Math.abs(moveY) > Math.abs(moveX) && moveY < 0)) { //向下滑动
-        if (verticalCout == 0) {
+        if (verticalCout == 0) { //在第一屏
             scrollToMyDiv(section2); //到第二屏
             //第二屏动画进入
-            //变成big
             $(".coin1").eq(0).removeClass("animate__animated animate__bounceOutDown").addClass("animate__animated animate__bounceInDown visible");
             $("#coin2").removeClass("animate__animated animate__bounceOutDown").addClass("animate__animated animate__bounceInDown visible");
             $("#screen2_model1").removeClass("animate__animated animate__slideOutRight").addClass("animate__animated animate__slideInRight visible");
             $("#screen2_model2").removeClass("animate__animated animate__slideOutLeft").addClass("animate__animated animate__slideInLeft visible");
             verticalCout++;
         }
-        else if (verticalCout == 1) {
+        else if (verticalCout == 1) { //在第二屏
             scrollToMyDiv(section3); //到第三屏
             //第二屏动画退出
             $(".coin1").eq(0).removeClass("animate__animated animate__bounceInDown").addClass("animate__animated animate__bounceOutUp hidden");
@@ -254,9 +220,6 @@ function boxTouchEndVertical(e) {
             $("#p3_back2").removeClass("animate__animated animate__bounceOutLeft").addClass("animate__animated animate__bounceInLeft visible");
             $("#p3_model2").removeClass("animate__animated animate__bounceOutLeft").addClass("animate__animated animate__bounceInLeft visible");
             $("#p3_text2").removeClass("animate__animated animate__slideOutRight").addClass("animate__animated animate__slideInRight visible");
-
-
-
             verticalCout++;
         }
         else {
@@ -476,26 +439,57 @@ function calculatePosition() {
 }
 
 
-var ids = ["#draw_face", "#flower", "#sticker", "#needle", "#model_rect", "#badge"];
-$(document).ready(function () {
+document.addEventListener("DOMContentLoaded", function () {
     var openingPlane = '<img src="images/opening_plane.gif" id="opening_plane" style="z-index: 40;">';
     var openingSmoke = '<img src="images/opening_smoke.gif" class="opening_scale" style="z-index: 30;">';
     var openingElement = '<img src="images/opening_element.gif" id="opening_element" style="z-index: 20;">';
     var openingBackground = '<img src="images/opening_background.gif" class="opening_scale " style="z-index: 10;"></img>';
     setInterval(Marquee0, speed);
     setInterval(Marquee1, speed);
-    document.onreadystatechange = function () {//即在加载的过程中执行下面的代码
-        if (document.readyState == "complete") {//complete加载完成
-            $("#opening").append([openingPlane, openingSmoke, openingElement, openingBackground]);
-            responsiveOpening();
-            setTimeout(function () {
-                $("#opening").fadeOut();
-                $("html").removeClass("no_scroll");
-                $("body").removeClass("no_scroll");
-                $("#body").removeClass("hidden");
-            }, 3000);
+    $("#opening").append([openingPlane, openingSmoke, openingElement, openingBackground]);
+        responsiveOpening();
+        setTimeout(function () {
+            $("#opening").fadeOut();
+            $("html").removeClass("no_scroll");
+            $("body").removeClass("no_scroll");
+            $("#body").removeClass("hidden");
+    }, 3000);
+
+
+
+    var lazyloadImages;
+    var lazyloadThrottleTimeout;
+    lazyloadImages = document.querySelectorAll(".lazy");
+
+    function lazyload() {
+        if (lazyloadThrottleTimeout) {
+            clearTimeout(lazyloadThrottleTimeout);
         }
+
+        lazyloadThrottleTimeout = setTimeout(function () {
+            var scrollTop = window.pageYOffset;
+            lazyloadImages.forEach(function (img) {
+                if (img.offsetTop < (window.innerHeight + scrollTop + 500)) {
+                    img.src = img.dataset.src;
+                    img.classList.remove('lazy');
+                }
+            });
+            if (lazyloadImages.length == 0) {
+                document.removeEventListener("scroll", lazyload);
+                window.removeEventListener("resize", lazyload);
+                window.removeEventListener("orientationChange", lazyload);
+            }
+        }, 20);
     }
+
+    document.addEventListener("scroll", lazyload);
+    window.addEventListener("resize", lazyload);
+    window.addEventListener("orientationChange", lazyload);
+})
+
+
+var ids = ["#draw_face", "#flower", "#sticker", "#needle", "#model_rect", "#badge"];
+$(document).ready(function () {
     for (let i = 0; i < ids.length; i++) {
         animation(ids[i]);
     }
